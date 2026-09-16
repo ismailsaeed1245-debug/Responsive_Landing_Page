@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,24 +11,26 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #1f2937;
+    color: #172033;
     background: #ffffff;
+    line-height: 1.6;
 }
 
 
-/* Navigation */
+/* =========================
+   NAVBAR
+========================= */
 
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e8edf5;
 }
 
 nav {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
     padding: 18px 25px;
 
@@ -37,21 +40,23 @@ nav {
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 800;
     color: #2563eb;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #4b5563;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.3s;
 }
 
@@ -60,11 +65,13 @@ nav {
 }
 
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 600px;
-    padding: 80px 20px;
+    min-height: 650px;
+    padding: 90px 25px;
 
     display: flex;
     align-items: center;
@@ -72,72 +79,96 @@ nav {
 
     text-align: center;
 
-    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+    background:
+        radial-gradient(circle at 15% 20%, #dbeafe 0, transparent 30%),
+        radial-gradient(circle at 85% 80%, #e0e7ff 0, transparent 30%),
+        linear-gradient(135deg, #f8fbff, #eef4ff);
 }
 
 .hero-content {
-    max-width: 750px;
+    max-width: 820px;
 }
 
 .tagline {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+
     color: #2563eb;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    background: #dbeafe;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
 }
 
 .hero h1 {
-    font-size: 56px;
-    line-height: 1.15;
+    font-size: 62px;
+    line-height: 1.1;
+    letter-spacing: -2px;
     color: #111827;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .hero-text {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    color: #6b7280;
-    font-size: 17px;
+    max-width: 650px;
+    margin: auto;
+
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
 .button {
     display: inline-block;
-    padding: 14px 30px;
+    margin-top: 32px;
+    padding: 15px 32px;
 
     background: #2563eb;
     color: white;
 
-    border-radius: 7px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
 
     transition: 0.3s;
 }
 
 .button:hover {
     background: #1d4ed8;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.3);
 }
 
 
-/* General Sections */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
-    padding: 80px 25px;
+    padding: 90px 25px;
 }
 
 .section h2 {
     text-align: center;
-    font-size: 34px;
+    font-size: 38px;
+    line-height: 1.2;
     color: #111827;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 
-/* Features */
+/* =========================
+   FEATURES
+========================= */
 
 .features {
     display: grid;
@@ -146,40 +177,55 @@ nav {
 }
 
 .feature {
-    padding: 35px 25px;
+    padding: 40px 30px;
 
     background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border: 1px solid #e5eaf2;
+    border-radius: 16px;
 
     text-align: center;
+
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
 
     transition: 0.3s;
 }
 
 .feature:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
     border-color: #bfdbfe;
 }
 
 .icon {
-    font-size: 38px;
-    margin-bottom: 18px;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+    border-radius: 15px;
+
+    font-size: 32px;
 }
 
 .feature h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #1f2937;
+    color: #111827;
+    font-size: 21px;
+    margin-bottom: 12px;
 }
 
 .feature p {
-    color: #6b7280;
+    color: #64748b;
     font-size: 15px;
 }
 
 
-/* Testimonials */
+/* =========================
+   TESTIMONIALS
+========================= */
 
 .testimonials-section {
     max-width: none;
@@ -187,7 +233,7 @@ nav {
 }
 
 .testimonials {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
 
     display: grid;
@@ -196,13 +242,237 @@ nav {
 }
 
 .testimonial {
+    padding: 35px;
+
     background: white;
-    padding: 30px;
+    border: 1px solid #e5eaf2;
+    border-radius: 16px;
 
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
 
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.testimonial p {
+    color: #475569;
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 22px;
+}
+
+.testimonial h4 {
+    color: #111827;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.testimonial span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
     text-align: center;
 }
 
-.test
+.contact-text {
+    max-width: 600px;
+    margin: -25px auto 40px;
+
+    color: #64748b;
+    font-size: 16px;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+
+    padding: 35px;
+
+    background: #f8fafc;
+    border: 1px solid #e5eaf2;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px 16px;
+
+    border: 1px solid #d7dee9;
+    border-radius: 8px;
+
+    background: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #dbeafe;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    border: none;
+    padding: 15px;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    background: #0f172a;
+    color: #cbd5e1;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 570px;
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        letter-spacing: -1px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .features,
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    nav {
+        padding: 16px 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 55px 18px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .button {
+        padding: 14px 25px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .contact-box {
+        padding: 22px;
+    }
+}
